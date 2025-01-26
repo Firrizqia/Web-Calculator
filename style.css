@@ -1,0 +1,75 @@
+/* Definisi variabel kustom */
+:root {
+    --color-container: rgb(10, 33, 45); /* Warna latar belakang untuk wadah kalkulator */
+    --color-operator: rgba(255, 47, 120); /* Warna untuk tombol operator seperti +, -, *, / */
+    --color-operator2: rgba(4, 177, 253); /* Warna untuk tombol kalkulator tambahan seperti AC, DEL, dan = */
+}
+
+/* Reset gaya default untuk semua elemen */
+* {
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+    box-sizing: border-box; /* Model kotak: padding dan border termasuk dalam lebar dan tinggi elemen */
+    font-family: "Roboto", sans-serif; /* Menggunakan font family Roboto */
+}
+
+/* Penataan tampilan badan dokumen */
+body {
+    height: 100vh; /* Tinggi badan dokumen sesuai tinggi viewport */
+    display: flex; /* Menggunakan flexbox untuk penataan */
+    align-items: center; /* Posisi elemen secara vertikal di tengah */
+    justify-content: center; /* Posisi elemen secara horizontal di tengah */
+    background-color: whitesmoke; /* Warna latar belakang badan dokumen */
+}
+
+/* Penataan tampilan wadah kalkulator */
+.container {
+    position: relative; /* Menetapkan posisi elemen */
+    max-width: 300px; /* Lebar maksimum wadah kalkulator */
+    width: 100%; /* Lebar wadah kalkulator */
+    border-radius: 12px; /* Sudut melengkung pada wadah kalkulator */
+    padding: 30px 20px 40px; /* Ruang di sekitar isi */
+    background-color: var(--color-container); /* Warna latar belakang wadah kalkulator */
+    box-shadow: 9px 10px 5px rgba(66, 66, 66, 0.5); /* Bayangan pada wadah kalkulator */
+}
+
+/* Tampilan elemen display */
+.display {
+    height: 80px; /* Tinggi elemen display */
+    width: 100%; /* Lebar elemen display */
+    border: none; /* Tidak ada border */
+    text-align: right; /* Penataan teks ke kanan */
+    background-color: var(--color-container); /* Warna latar belakang elemen display */
+    color: white; /* Warna teks */
+    font-size: 25px; /* Ukuran font */
+    pointer-events: none; /* Mencegah interaksi pengguna dengan elemen display */
+}
+
+/* Penataan tampilan tombol kalkulator */
+.button-calculator {
+    display: grid; /* Menggunakan grid untuk penataan */
+    grid-gap: 10px; /* Jarak antar kolom */
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom dengan lebar yang sama */
+    margin-top: 20px; /* Margin atas */
+}
+
+/* Tampilan tombol kalkulator */
+.button-calculator button {
+    padding: 10px; /* Padding tombol */
+    border-radius: 6px; /* Sudut melengkung tombol */
+    border: none; /* Tidak ada border */
+    font-size: 20px; /* Ukuran font */
+    background-color: rgba(12, 39, 53); /* Warna latar belakang tombol */
+    color: white; /* Warna teks */
+    cursor: pointer; /* Mengubah kursor saat di atas tombol */
+}
+
+/* Efek hover pada tombol kalkulator */
+.button-calculator button:hover {
+    transform: scale(1.05); /* Memperbesar tombol saat dihover */
+}
+
+/* Efek saat tombol ditekan */
+.button-calculator button:active {
+    transform: scale(0.90); /* Memperkecil tombol saat ditekan */
+}
